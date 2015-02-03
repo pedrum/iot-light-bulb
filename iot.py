@@ -5,7 +5,7 @@ import serial
 #turn bulb off when first starting
 status = 0
 ser = serial.Serial('/dev/tty.usbmodem1421', 9600)
-sendOffToArduino()
+ser.write('0')
 
 @route('/images/<filename>')
 def images(filename):
