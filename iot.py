@@ -2,10 +2,10 @@ from bottle import route, run, static_file, error, redirect, abort
 from time import sleep
 import serial
 
-
-status = 1
-
+#turn bulb off when first starting
+status = 0
 ser = serial.Serial('/dev/tty.usbmodem1421', 9600)
+sendOffToArduino()
 
 @route('/images/<filename>')
 def images(filename):
