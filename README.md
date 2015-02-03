@@ -1,2 +1,2 @@
 # iot-light-bulb
-IoT Concept Demonstration - Web Based LED Light Bulb
+IoT Concept Demonstration - Web Based Light Bulb
