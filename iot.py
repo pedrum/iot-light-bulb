@@ -24,7 +24,7 @@ def index():
 @route('/api')
 def get():
     return str(status)
-# 
+
 @route('/api/<value:int>', method='POST')
 def post(value='1'):
 	global status
