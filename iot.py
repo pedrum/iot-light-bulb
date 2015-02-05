@@ -47,5 +47,4 @@ def sendOffToArduino():
 	global ser
 	ser.write('0')
 
-
 run(host='localhost', port=80, debug=True)
