@@ -4,14 +4,10 @@ int relay = 7;
 char incoming = ' ';
 
 void setup() {                
-<<<<<<< HEAD
   // initialize the digital pin as an output.
   pinMode(led, OUTPUT);
   pinMode(relay, OUTPUT);  
   digitalWrite(relay, HIGH);
-=======
-  pinMode(led, OUTPUT);     
->>>>>>> FETCH_HEAD
   Serial.begin(9600);
 }
 
