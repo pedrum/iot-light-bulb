@@ -1,12 +1,14 @@
+#IoT Light Bulb Concept - Web Server
 from bottle import route, run, static_file, error, redirect, abort
 from time import sleep
 import serial
 
-#turn bulb off when first starting
+comPort = '/dev/tty.usbmodem1421'  #replace with your COM port
 status = 0
-ser = serial.Serial('/dev/tty.usbmodem1421', 9600)
-ser.write('0')
+ser = serial.Serial(comPort, 9600)
+ser.write('0')	#start with bulb off
 
+#Define Routes
 @route('/images/<filename>')
 def images(filename):
 	return static_file(filename, root='images')
@@ -27,7 +29,6 @@ def get():
 def post(value='1'):
 	global status
 
-	#write value to serial port
 	if value == 1:
 		status = 1
 		sendOnToArduino()
